@@ -20,7 +20,7 @@ def main() -> None:
     col1, col2 = st.columns([1, 6])
 
     with col1:
-        logo = Image.open("assets/logoSDA2.png") # I cannot really defend myself here
+        logo = Image.open("assets/logoSDA2.png") # I cannot really defend myself here ## Nothing to defend there ;)
         st.image(logo, width=150)
 
     with col2:
