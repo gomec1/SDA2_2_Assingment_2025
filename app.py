@@ -20,7 +20,7 @@ def main() -> None:
     col1, col2 = st.columns([1, 6])
 
     with col1:
-        logo = Image.open("assets/logoSDA2.png") # I cannot really defend myself here ## Nothing to defend there ;)
+        logo = Image.open("assets/logoSDA2.png") # I cannot really defend myself here
         st.image(logo, width=150)
 
     with col2:
@@ -57,6 +57,31 @@ def main() -> None:
         options=plugin_names,
         default=plugin_names, 
     ) 
+
+    # Find & Replace plugin
+    ###############################################################################
+    find_replace = next((p for p in plugins if p.name == "Find & Replace"), None)
+
+    if find_replace is not None and find_replace.name in selected_names:
+        with st.expander("Find & Replace settings", expanded=False):
+            pattern = st.text_input(
+                "Find",
+                value=getattr(find_replace, "pattern", ""),
+                help="Text (or regex if 'Use regex' is checked)"
+            )
+            replacement = st.text_input(
+                "Replace with",
+                value=getattr(find_replace, "replacement", ""),
+            )
+            use_regex = st.checkbox(
+                "Use regex",
+                value=getattr(find_replace, "use_regex", False),
+            )
+
+        find_replace.pattern = pattern
+        find_replace.replacement = replacement
+        find_replace.use_regex = use_regex
+    ###############################################################################
 
     st.subheader("3. Process text")
     process_button = st.button("Run processing", disabled=(uploaded is None))
