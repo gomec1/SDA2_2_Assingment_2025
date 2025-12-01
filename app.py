@@ -83,6 +83,42 @@ def main() -> None:
         find_replace.use_regex = use_regex
     ###############################################################################
 
+         # Translating Plugin settings with DeepL
+    ###############################################################################
+    deepL_plugin = next(
+        (p for p in plugins if p.name == "Translating Plugin with DeepL"), None
+    )
+
+    if deepL_plugin is not None and deepL_plugin.name in selected_names:
+        # Get supported language names and DeepL codes
+        language_labels = list(getattr(deepL_plugin, "SUPPORTED_TARGET_LANGS", {}).keys())
+        code_map = getattr(deepL_plugin, "SUPPORTED_TARGET_LANGS", {})
+
+        if not language_labels:
+            language_labels = ["English"]
+            code_map = {"English": "EN"}
+
+        # Determine current language index for default selection
+        current_code = getattr(deepL_plugin, "target_lang", "EN")
+        try:
+            current_label_index = list(code_map.values()).index(current_code)
+        except ValueError:
+            current_label_index = 0
+
+        with st.expander("Translation Settings", expanded=False):
+            selected_label = st.selectbox(
+                "Select target language:",
+                options=language_labels,
+                index=current_label_index,
+                help="Choose the language you want the text to be translated into."
+            )
+
+        # Update plugin configuration
+        deepL_plugin.target_lang = code_map[selected_label]
+    ###############################################################################
+
+
+
     st.subheader("3. Process text")
     process_button = st.button("Run processing", disabled=(uploaded is None))
 
