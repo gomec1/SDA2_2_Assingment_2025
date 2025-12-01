@@ -134,3 +134,15 @@ After generating your key, simply replace the existing one in the plugin file:
 ```bash
 API_KEY = "YOUR_NEW_KEY_HERE"
 ```
+
+## Grammar Checker
+The Grammar Checker uses the Gemini API (gemini-2.5-flash) to perform expert-level proofreading. It corrects grammar, typos, and punctuation while strictly preserving the original meaning and structure of the text.
+
+**API Key Required:** 
+Ensure your GEMINI_API_KEY is set in your project's .env file like this:
+```bash
+GEMINI_API_KEY="YOUR_API_KEY_HERE"
+```
+You can obtain a key from Google AI Studio.
+
+The plugin returns only the corrected text with no extra explanation or formatting. If the API key is missing or the client fails to initialize, it will return an error message.
