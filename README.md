@@ -115,6 +115,9 @@ This plugin:
 - Prepends the report to the processed output while keeping the original text intact.
 No additional configuration is required—simply select the plugin and process the text.
 
+## Letter + Word Counter
+Counts total words and alphabetic letters (ignores spaces and punctuations), then prepends a short report ahead of your original text. No configuration needed—just select the plugin and process the file to see the counts.
+
 ## Translating Plugin with DeepL
 The Translating Plugin with DeepL uses the official DeepL API to translate the entire input text into a selected target language.
 In the user interface, you can choose the output language (e.g., English, German, French, Italian, etc.). DeepL automatically detects the input language unless a source language is manually specified in the plugin code.

@@ -55,8 +55,7 @@ def main() -> None:
     selected_names: List[str] = st.multiselect(
         "Plugins will be applied in the order shown below.",
         options=plugin_names,
-        default=plugin_names, 
-    ) 
+    )
 
     # Find & Replace plugin
     ###############################################################################
