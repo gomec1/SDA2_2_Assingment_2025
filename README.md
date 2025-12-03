@@ -75,8 +75,6 @@ venv\Scripts\activate.bat
 source venv/bin/activate
 ```
 
----
-
 ## 3. 📦 Install Required Dependencies
 
 ```bash
@@ -90,6 +88,7 @@ streamlit
 Pillow
 requests
 ```
+
 ## 4. ✅ Start Microkernel application
 
 ```bash
