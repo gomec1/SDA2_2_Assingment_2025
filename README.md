@@ -100,6 +100,23 @@ You can now view our Streamlit app in your browser.
 
 ---
 
+# 📂 Folder Structure
+
+```bash
+├── assets/                  # Sample files or other resources
+├── core/                    # Microkernel core: plugin base, loader, and text orchestrator
+│   ├── plugin_base.py       # Defines the BasePlugin interface for all plugins
+│   └── plugin_loader.py     # Dynamically discovers and loads plugin classes
+│   └── text_core.py         # Core text engine: file I/O and plugin execution
+├── plugins/                 # Folder containing all plugin modules
+├── .gitignore               # Files ignored by Git
+├── app.py                   # Main application entry point
+├── LICENSE                  # Project license
+├── README.md                # Project documentation and usage guide
+└── requirements.txt         # Python dependency list         
+```
+---
+
 # 💾 Plugin descriptions
 ## Find & Replace
 Replace all occurrences of a string (or regex pattern) with another string.
