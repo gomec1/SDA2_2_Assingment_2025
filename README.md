@@ -103,7 +103,7 @@ You can now view our Streamlit app in your browser.
 # 📂 Folder Structure
 
 ```bash
-├── assets/                  # Sample files or other resources
+├── assets/                  # logo file
 ├── core/                    # Microkernel core: plugin base, loader, and text orchestrator
 │   ├── plugin_base.py       # Defines the BasePlugin interface for all plugins
 │   └── plugin_loader.py     # Dynamically discovers and loads plugin classes
