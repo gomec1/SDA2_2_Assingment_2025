@@ -106,6 +106,11 @@ You can now view our Streamlit app in your browser.
 Replace all occurrences of a string (or regex pattern) with another string.
 Simple select the plugin and write the string you want to find and the string you want it to be replaced with and process. If you want to use a regex pattern, check the "Use regex" checkbox before processing.
 
+## Sentiment Analysis
+Analyzes the overall sentiment of the text (positive, negative, neutral)
+and prepends a short summary at the top of the text.
+This is done by counting the amount of positiv or negativ words in the text, based on provided positiv and negativ word lists. Intensifier like "very" double the count of the word and negations change the sentiment of the following word.
+
 ## Top Words (Frequency)
 The Top Words (Frequency) plugin analyzes the input text and identifies the most frequently used words.
 This plugin:
