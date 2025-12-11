@@ -1,3 +1,5 @@
-streamlit>=1.30
-Pillow>=10.0
-requests>=2.32.3
+streamlit
+Pillow
+requests
+python-dotenv
+google-genai
