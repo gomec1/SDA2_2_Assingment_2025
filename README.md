@@ -87,6 +87,8 @@ pip install -r requirements.txt
 streamlit
 Pillow
 requests
+python-dotenv
+google-genai
 ```
 
 ## 4. ✅ Start Microkernel application
