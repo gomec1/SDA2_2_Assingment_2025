@@ -177,7 +177,7 @@ The plugin returns only the corrected text with no extra explanation or formatti
 It removes any unnecessary white spaces and line breaks from the text.
 
 ## Shakespearean Filter
-Changes certain words as if it was written by Shakespear. Following words are supported:
+Changes certain words as if it was written by Shakespear. Following words are supported (modern english words are changed to shakespearean english):
 | Modern English | Shakespearean English |
 |----------------|------------------------|
 | you            | thou                   |
