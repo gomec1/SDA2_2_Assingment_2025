@@ -172,3 +172,31 @@ GEMINI_API_KEY="YOUR_API_KEY_HERE"
 You can obtain a key from Google AI Studio.
 
 The plugin returns only the corrected text with no extra explanation or formatting. If the API key is missing or the client fails to initialize, it will return an error message.
+
+## Whitespace & linebreak cleaner
+It removes any unnecessary white spaces and line breaks from the text.
+
+## Shakespearean Filter
+Changes certain words as if it was written by Shakespear. Following words are supported:
+| Modern English | Shakespearean English |
+|----------------|------------------------|
+| you            | thou                   |
+| are            | art                    |
+| your           | thy                    |
+| yours          | thine                  |
+| have           | hast                   |
+| has            | hath                   |
+| do             | dost                   |
+| does           | doth                   |
+| go             | goest                  |
+| come           | comest                 |
+| think          | think’st               |
+| friend         | good sir               |
+| hello          | hail                   |
+| hi             | well met               |
+| yes            | aye                    |
+| no             | nay                    |
+| please         | prithee                |
+| food           | victuals               |
+| money          | coin                   |
+
